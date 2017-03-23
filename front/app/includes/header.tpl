@@ -2,8 +2,8 @@
 <html lang="en" ng-app="mewApp">
 <head>
   <meta charset="utf-8">
-  <title>Test Wallet</title>
-  <link rel="canonical" href="https://www.myetherwallet.com" />
+  <title>Antique Wallet</title>
+  <link rel="canonical" href="" />
   <meta name="description" content="Test Wallet">
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,7 +39,7 @@
   <section class="container-fluid bg-gradient header-branding">
     <section class="container">
 
-      @@if (site === 'mew' ) { <a class="brand" href="https://www.myetherwallet.com/"><img src="images/etherwallet-logo.svg" height="64px" width="auto" alt="MyEtherWallet" /></a> }
+      @@if (site === 'mew' ) { <a class="brands" style="padding:12px;width:90px"  href=""><img src="images/xnccoin.png" height="60px" width="auto" alt="MyEtherWallet" /><a style="font-size:28px;font-family:'cursive'"> AntiqueWallet</a></a> }
       @@if (site === 'cx' ) { <a class="brand" href="/cx-wallet.html"><img src="images/etherwalletcx-logo.svg" height="64px" width="auto" alt="MyEtherWallet" /></a> }
 
 

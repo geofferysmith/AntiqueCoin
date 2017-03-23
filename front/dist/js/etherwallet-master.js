@@ -8,53 +8,11 @@ module.exports=[
 ]
 
 },{}],2:[function(require,module,exports){
-module.exports=[
-  {
-      "name": "Augur / REP",
-      "address": "0x48c80F1f4D53D5951e5D5438B54Cba84f29F32a5",
-      "abi": '[{"name": "allowance","type": "function","constant": true,"inputs": [{ "name": "owner", "type": "address" }, { "name": "spender", "type": "address" }],"outputs": [{ "name": "out", "type": "uint256" }]},{"name": "approve","type": "function","constant": false,"inputs": [{ "name": "spender", "type": "address" }, { "name": "amount", "type": "uint256" }],"outputs": [{ "name": "out", "type": "uint256" }]},{"name": "balanceOf","type": "function","constant": true,"inputs": [{ "name": "address", "type": "address" }],"outputs": [{ "name": "out", "type": "uint256" }]},{"name": "decimals","type": "function","constant": true,"inputs": [],"outputs": [{ "name": "out", "type": "uint256" }]},{"name": "getSeeded","type": "function","constant": true,"inputs": [],"outputs": [{ "name": "out", "type": "uint256" }]},{"name": "name","type": "function","constant": true,"inputs": [],"outputs": [{ "name": "out", "type": "uint256" }]},{"name": "setSaleDistribution","type": "function","constant": false,"inputs": [{ "name": "addresses", "type": "address[]" }, { "name": "balances", "type": "uint256[]" }],"outputs": [{ "name": "out", "type": "uint256" }]},{"name": "symbol","type": "function","constant": true,"inputs": [],"outputs": [{ "name": "out", "type": "uint256" }]},{"name": "totalSupply","type": "function","constant": true,"inputs": [],"outputs": [{ "name": "out", "type": "uint256" }]},{"name": "transfer","type": "function","constant": false,"inputs": [{ "name": "receiver", "type": "address" }, { "name": "fxpValue", "type": "uint256" }],"outputs": [{ "name": "out", "type": "uint256" }]},{"name": "transferFrom","type": "function","constant": false,"inputs": [{ "name": "from", "type": "address" }, { "name": "receiver", "type": "address" }, { "name": "fxpValue", "type": "uint256" }],"outputs": [{ "name": "out", "type": "uint256" }]},{"name": "Approval(address,address,uint256)","type": "event","inputs": [{ "name": "owner", "type": "address", "indexed": true }, { "name": "spender", "type": "address", "indexed": true }, { "name": "fxpValue", "type": "uint256", "indexed": false }]},{"name": "Transfer(address,address,uint256)","type": "event","inputs": [{ "name": "from", "type": "address", "indexed": true }, { "name": "to", "type": "address", "indexed": true }, { "name": "value", "type": "uint256", "indexed": false }]}]'
-  },{
-    	"name": "DGD Token",
-      "address": "0xE0B7927c4aF23765Cb51314A0E0521A9645F0E2A",
-    	"abi": '[{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"success","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"setOwner","outputs":[{"name":"success","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"success","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"a","type":"uint256"},{"name":"b","type":"uint256"}],"name":"subtractSafely","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"},{"name":"_amount","type":"uint256"}],"name":"mint","outputs":[{"name":"success","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"a","type":"uint256"},{"name":"b","type":"uint256"}],"name":"safeToAdd","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"balance","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"success","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"a","type":"uint256"},{"name":"b","type":"uint256"}],"name":"addSafely","outputs":[{"name":"result","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"locked","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"},{"name":"_spender","type":"address"}],"name":"allowance","outputs":[{"name":"remaining","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[{"name":"a","type":"uint256"},{"name":"b","type":"uint256"}],"name":"safeToSubtract","outputs":[{"name":"","type":"bool"}],"type":"function"},{"inputs":[],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_from","type":"address"},{"indexed":true,"name":"_to","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_recipient","type":"address"},{"indexed":true,"name":"_amount","type":"uint256"}],"name":"Mint","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_owner","type":"address"},{"indexed":true,"name":"_spender","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Approval","type":"event"}]'
-	},{
-      "name": "DGD Crowdsale (Claim)",
-      "address": "0xf0160428a8552ac9bb7e050d90eeade4ddd52843",
-      "abi": '[{"constant":false,"inputs":[{"name":"_eth","type":"uint256"}],"name":"setEthToCents","outputs":[{"name":"success","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"startDate","outputs":[{"name":"date","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[],"name":"claimFounders","outputs":[{"name":"success","type":"bool"}],"type":"function"},{"constant":true,"inputs":[{"name":"_user","type":"address"}],"name":"userInfo","outputs":[{"name":"centstotal","type":"uint256"},{"name":"weitotal","type":"uint256"},{"name":"share","type":"uint256"},{"name":"badges","type":"uint256"},{"name":"claimed","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"getPeriod","outputs":[{"name":"saleperiod","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"periodTwo","outputs":[{"name":"date","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[{"name":"_user","type":"address"}],"name":"proxyPurchase","outputs":[{"name":"success","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"BILLION","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[],"name":"claim","outputs":[{"name":"success","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"ethToCents","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[{"name":"_wei","type":"uint256"}],"name":"weiToCents","outputs":[{"name":"centsvalue","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"totalWei","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"WEI_PER_ETH","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"goalReached","outputs":[{"name":"reached","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"_proxy","type":"address"}],"name":"getPayout","outputs":[{"name":"payout","type":"address"},{"name":"isproxy","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"myInfo","outputs":[{"name":"centstotal","type":"uint256"},{"name":"weitotal","type":"uint256"},{"name":"share","type":"uint256"},{"name":"badges","type":"uint256"},{"name":"claimed","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"_payout","type":"address"}],"name":"regProxy","outputs":[{"name":"success","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"getSaleStatus","outputs":[{"name":"fclaim","type":"bool"},{"name":"reltokens","type":"uint256"},{"name":"relbadges","type":"uint256"},{"name":"claimers","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[],"name":"sendFunds","outputs":[{"name":"success","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"isEnded","outputs":[{"name":"ended","type":"bool"}],"type":"function"},{"constant":false,"inputs":[],"name":"unlock","outputs":[{"name":"success","type":"bool"}],"type":"function"},{"constant":true,"inputs":[{"name":"_contrib","type":"uint256"},{"name":"_total","type":"uint256"}],"name":"calcShare","outputs":[{"name":"share","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[{"name":"_payout","type":"address"}],"name":"getProxy","outputs":[{"name":"proxy","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"periodThree","outputs":[{"name":"date","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"totalCents","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"endDate","outputs":[{"name":"date","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"getSaleConfig","outputs":[{"name":"start","type":"uint256"},{"name":"two","type":"uint256"},{"name":"three","type":"uint256"},{"name":"end","type":"uint256"},{"name":"goal","type":"uint256"},{"name":"cap","type":"uint256"},{"name":"badgecost","type":"uint256"},{"name":"famount","type":"uint256"},{"name":"fwallet","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"getSaleInfo","outputs":[{"name":"weiamount","type":"uint256"},{"name":"cents","type":"uint256"},{"name":"realcents","type":"uint256"},{"name":"amount","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[{"name":"_user","type":"address"}],"name":"claimFor","outputs":[{"name":"success","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"CENTS","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[{"name":"_a","type":"uint256"},{"name":"_c","type":"uint256"}],"name":"ppb","outputs":[{"name":"b","type":"uint256"}],"type":"function"},{"inputs":[{"name":"_config","type":"address"}],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_exchange","type":"uint256"},{"indexed":true,"name":"_rate","type":"uint256"},{"indexed":true,"name":"_cents","type":"uint256"}],"name":"Purchase","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_user","type":"address"},{"indexed":true,"name":"_amount","type":"uint256"},{"indexed":true,"name":"_badges","type":"uint256"}],"name":"Claim","type":"event"}]'
-  },{
-      "name": "The (OG) DAO",
-      "address": "0xbb9bc244d798123fde783fcc1c72d3bb8c189413",
-      "abi": '[{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"proposals","outputs":[{"name":"recipient","type":"address"},{"name":"amount","type":"uint256"},{"name":"description","type":"string"},{"name":"votingDeadline","type":"uint256"},{"name":"open","type":"bool"},{"name":"proposalPassed","type":"bool"},{"name":"proposalHash","type":"bytes32"},{"name":"proposalDeposit","type":"uint256"},{"name":"newCurator","type":"bool"},{"name":"yea","type":"uint256"},{"name":"nay","type":"uint256"},{"name":"creator","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_amount","type":"uint256"}],"name":"approve","outputs":[{"name":"success","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"minTokensToCreate","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"rewardAccount","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"daoCreator","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"divisor","outputs":[{"name":"divisor","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"extraBalance","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_proposalID","type":"uint256"},{"name":"_transactionData","type":"bytes"}],"name":"executeProposal","outputs":[{"name":"_success","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"success","type":"bool"}],"type":"function"},{"constant":false,"inputs":[],"name":"unblockMe","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"totalRewardToken","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"actualBalance","outputs":[{"name":"_actualBalance","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"closingTime","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"allowedRecipients","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferWithoutReward","outputs":[{"name":"success","type":"bool"}],"type":"function"},{"constant":false,"inputs":[],"name":"refund","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_recipient","type":"address"},{"name":"_amount","type":"uint256"},{"name":"_description","type":"string"},{"name":"_transactionData","type":"bytes"},{"name":"_debatingPeriod","type":"uint256"},{"name":"_newCurator","type":"bool"}],"name":"newProposal","outputs":[{"name":"_proposalID","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"DAOpaidOut","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"minQuorumDivisor","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[{"name":"_newContract","type":"address"}],"name":"newContract","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"balance","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[{"name":"_recipient","type":"address"},{"name":"_allowed","type":"bool"}],"name":"changeAllowedRecipients","outputs":[{"name":"_success","type":"bool"}],"type":"function"},{"constant":false,"inputs":[],"name":"halveMinQuorum","outputs":[{"name":"_success","type":"bool"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"paidOut","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[{"name":"_proposalID","type":"uint256"},{"name":"_newCurator","type":"address"}],"name":"splitDAO","outputs":[{"name":"_success","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"DAOrewardAccount","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"proposalDeposit","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"numberOfProposals","outputs":[{"name":"_numberOfProposals","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"lastTimeMinQuorumMet","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[{"name":"_toMembers","type":"bool"}],"name":"retrieveDAOReward","outputs":[{"name":"_success","type":"bool"}],"type":"function"},{"constant":false,"inputs":[],"name":"receiveEther","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"success","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"isFueled","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"_tokenHolder","type":"address"}],"name":"createTokenProxy","outputs":[{"name":"success","type":"bool"}],"type":"function"},{"constant":true,"inputs":[{"name":"_proposalID","type":"uint256"}],"name":"getNewDAOAddress","outputs":[{"name":"_newDAO","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_proposalID","type":"uint256"},{"name":"_supportsProposal","type":"bool"}],"name":"vote","outputs":[{"name":"_voteID","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[],"name":"getMyReward","outputs":[{"name":"_success","type":"bool"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"rewardToken","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFromWithoutReward","outputs":[{"name":"success","type":"bool"}],"type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"},{"name":"_spender","type":"address"}],"name":"allowance","outputs":[{"name":"remaining","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[{"name":"_proposalDeposit","type":"uint256"}],"name":"changeProposalDeposit","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"blocked","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"curator","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"_proposalID","type":"uint256"},{"name":"_recipient","type":"address"},{"name":"_amount","type":"uint256"},{"name":"_transactionData","type":"bytes"}],"name":"checkProposalCode","outputs":[{"name":"_codeChecksOut","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"privateCreation","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_curator","type":"address"},{"name":"_daoCreator","type":"address"},{"name":"_proposalDeposit","type":"uint256"},{"name":"_minTokensToCreate","type":"uint256"},{"name":"_closingTime","type":"uint256"},{"name":"_privateCreation","type":"address"}],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_from","type":"address"},{"indexed":true,"name":"_to","type":"address"},{"indexed":false,"name":"_amount","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_owner","type":"address"},{"indexed":true,"name":"_spender","type":"address"},{"indexed":false,"name":"_amount","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"value","type":"uint256"}],"name":"FuelingToDate","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"amount","type":"uint256"}],"name":"CreatedToken","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Refund","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"proposalID","type":"uint256"},{"indexed":false,"name":"recipient","type":"address"},{"indexed":false,"name":"amount","type":"uint256"},{"indexed":false,"name":"newCurator","type":"bool"},{"indexed":false,"name":"description","type":"string"}],"name":"ProposalAdded","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"proposalID","type":"uint256"},{"indexed":false,"name":"position","type":"bool"},{"indexed":true,"name":"voter","type":"address"}],"name":"Voted","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"proposalID","type":"uint256"},{"indexed":false,"name":"result","type":"bool"},{"indexed":false,"name":"quorum","type":"uint256"}],"name":"ProposalTallied","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_newCurator","type":"address"}],"name":"NewCurator","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_recipient","type":"address"},{"indexed":false,"name":"_allowed","type":"bool"}],"name":"AllowedRecipientChanged","type":"event"}]'
-  },{
-      "name": "DAO Withdraw",
-      "address": "0xbf4ed7b27f1d666546e30d74d50d173d20bca754",
-      "abi": '[{"constant":false,"inputs":[],"name":"trusteeWithdraw","outputs":[],"type":"function"},{"constant":false,"inputs":[],"name":"withdraw","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"mainDAO","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"trustee","outputs":[{"name":"","type":"address"}],"type":"function"}]'
-  },{
-      "name": "DAO Withdraw",
-      "address": "0x9f5304da62a5408416ea58a17a92611019bd5ce3",
-      "abi": '[{"constant":true,"inputs":[{"name":"_dth","type":"address"}],"name":"calculateWithdraw","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[],"name":"escapeHatch","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"_additionalSeconds","type":"uint256"}],"name":"extendClosingTime","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_account","type":"address"}],"name":"getPaidOut","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"getWHGDonationAddress","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"_account","type":"address"}],"name":"getMyBalance","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"getOwner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_newOwner","type":"address"}],"name":"changeOwner","outputs":[],"type":"function"},{"constant":false,"inputs":[],"name":"claimRemaining","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":false,"inputs":[],"name":"deposit","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"_beneficiary","type":"address"},{"name":"_percentageWHG","type":"uint256"},{"name":"_v","type":"uint8"},{"name":"_r","type":"bytes32"},{"name":"_s","type":"bytes32"}],"name":"proxyWithdraw","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"getTotalFunds","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[{"name":"_beneficiary","type":"address"},{"name":"_percentageWHG","type":"uint256"}],"name":"withdraw","outputs":[],"type":"function"},{"inputs":[{"name":"_whg_donation","type":"address"},{"name":"_daoBalanceSnapshotAddress","type":"address"},{"name":"_escapeAddress","type":"address"},{"name":"_remainingBeneficiary","type":"address"}],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"dth","type":"address"},{"indexed":true,"name":"beneficiary","type":"address"},{"indexed":false,"name":"amount","type":"uint256"},{"indexed":false,"name":"percentageWHG","type":"uint256"},{"indexed":false,"name":"withdrawType","type":"uint256"}],"name":"Withdraw","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_depositor","type":"address"},{"indexed":false,"name":"_allowed","type":"bool"}],"name":"CertifiedDepositorsChanged","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"amount","type":"uint256"}],"name":"Deposit","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"amount","type":"uint256"}],"name":"EscapeCalled","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"amount","type":"uint256"}],"name":"RemainingClaimed","type":"event"}]'
-  },{
-      "name": "DAO ExtraBalance Withdraw",
-      "address": "0x755cdba6AE4F479f7164792B318b2a06c759833B",
-      "abi": '[{"constant":false,"inputs":[],"name":"clawback","outputs":[],"type":"function"},{"constant":false,"inputs":[],"name":"withdraw","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"mainDAO","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"trustee","outputs":[{"name":"","type":"address"}],"type":"function"}]'
-  },{
-      "name": "DAO ExtraBalance Token",
-      "address": "0x5c40eF6f527f4FbA68368774E6130cE6515123f2",
-      "abi": '[{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"success","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"success","type":"bool"}],"type":"function"},{"constant":false,"inputs":[],"name":"seal","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[{"name":"data","type":"uint256[]"}],"name":"fill","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"address"}],"name":"allowance","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"sealed","outputs":[{"name":"","type":"bool"}],"type":"function"},{"inputs":[],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Transfer","type":"event"}]'
-  },{
-      "name": "Milestone Tracker",
-      "address": "0x3c01ddc7af41e6888cbd8d0398fe34a81c3c7f36",
-      "abi": '[{"constant":true,"inputs":[],"name":"proposedMilestones","outputs":[{"name":"","type":"bytes"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"changingMilestones","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"campaignCanceled","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_idMilestone","type":"uint256"}],"name":"collectMilestonePayment","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"unproposeMilestones","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"donor","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_idMilestone","type":"uint256"}],"name":"milestoneCompleted","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_hashProposals","type":"bytes32"}],"name":"acceptProposedMilestones","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_idMilestone","type":"uint256"}],"name":"approveCompletedMilestone","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"recipient","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_newMilestones","type":"bytes"}],"name":"proposeMilestones","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"arbitrator","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"arbitrateCancelCampaign","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_newRecipient","type":"address"}],"name":"changeRecipient","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"numberOfMilestones","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_idMilestone","type":"uint256"}],"name":"rejectMilestone","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_newDonor","type":"address"}],"name":"changeDonor","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"milestones","outputs":[{"name":"description","type":"string"},{"name":"url","type":"string"},{"name":"minCompletionDate","type":"uint256"},{"name":"maxCompletionDate","type":"uint256"},{"name":"reviewer","type":"address"},{"name":"reviewTime","type":"uint256"},{"name":"paymentSource","type":"address"},{"name":"payData","type":"bytes"},{"name":"status","type":"uint8"},{"name":"doneTime","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_idMilestone","type":"uint256"}],"name":"arbitrateApproveMilestone","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_idMilestone","type":"uint256"}],"name":"cancelMilestone","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_newArbitrator","type":"address"}],"name":"changeArbitrator","outputs":[],"payable":false,"type":"function"},{"inputs":[{"name":"_arbitrator","type":"address"},{"name":"_donor","type":"address"},{"name":"_recipient","type":"address"}],"payable":false,"type":"constructor"},{"anonymous":false,"inputs":[],"name":"NewMilestoneListProposed","type":"event"},{"anonymous":false,"inputs":[],"name":"NewMilestoneListUnproposed","type":"event"},{"anonymous":false,"inputs":[],"name":"NewMilestoneListAccepted","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"idProposal","type":"uint256"},{"indexed":false,"name":"newProposal","type":"uint8"}],"name":"ProposalStatusChanged","type":"event"},{"anonymous":false,"inputs":[],"name":"CampaignCalncelled","type":"event"}]'
-  },{
-      "name": "Replay Safe Split",
-      "address": "0xAA1A6e3e6EF20068f7F8d8C835d2D22fd5116444",
-      "abi": '[{"constant":false,"inputs":[{"name":"targetFork","type":"address"},{"name":"targetNoFork","type":"address"}],"name":"split","outputs":[{"name":"","type":"bool"}],"type":"function"}]'
-  }
-]
-
-
-
-
+module.exports=[{
+    "name": "XNC",
+    "address": "0x237f687b1634d50b367e09b8462c47fd95682f5d",
+    "abi": '[{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"founder","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_fileHash","type":"bytes32"}],"name":"registerAntique","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"balance","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_newFounder","type":"address"}],"name":"changeFounder","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"bytes32"}],"name":"antiques","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_fileHash","type":"bytes32"}],"name":"transferAntique","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"},{"name":"_spender","type":"address"}],"name":"allowance","outputs":[{"name":"remaining","type":"uint256"}],"payable":false,"type":"function"},{"inputs":[{"name":"_founder","type":"address"},{"name":"_totalSupply","type":"uint256"}],"payable":false,"type":"constructor"},{"payable":false,"type":"fallback"},{"anonymous":false,"inputs":[{"indexed":false,"name":"hash","type":"bytes32"}],"name":"RegistrationAntique","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"filehash","type":"bytes32"},{"indexed":false,"name":"from","type":"address"},{"indexed":false,"name":"to","type":"address"}],"name":"TransferAntique","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_from","type":"address"},{"indexed":true,"name":"_to","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_owner","type":"address"},{"indexed":true,"name":"_spender","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Approval","type":"event"}]'
+}]
 },{}],3:[function(require,module,exports){
 module.exports=[]
 },{}],4:[function(require,module,exports){
@@ -3423,7 +3381,7 @@ nodes.nodeList = {
         'tokenList': require('./tokens/ethTokens.json'),
         'abiList': require('./abiDefinitions/ethAbi.json'),
         'estimateGas': true,
-        'service': 'MyEtherWallet',
+        'service': 'Mainnet',
         'lib': new nodes.customNode('https://api.myetherapi.com/eth', '')
     },
     'eth2_mew': {
@@ -3436,7 +3394,7 @@ nodes.nodeList = {
         'tokenList': require('./tokens/ethTokens.json'),
         'abiList': require('./abiDefinitions/ethAbi.json'),
         'estimateGas': true,
-        'service': 'MyEtherWallet',
+        'service': 'Mainnet',
         'lib': require('./nodeHelpers/mewEth')
     },
     'eth_ethscan': {
@@ -3462,9 +3420,11 @@ nodes.nodeList = {
         'tokenList': require('./tokens/ropstenTokens.json'),
         'abiList': require('./abiDefinitions/ropstenAbi.json'),
         'estimateGas': true,
-        'service': 'MyEtherWallet',
+        'service': 'Mainnet',
         'lib': new nodes.customNode('https://api.myetherapi.com/rop', '')
-    },
+    }
+};
+const testnodes = {
     'etc_epool': {
         'name': 'ETC',
         'blockExplorerTX': 'https://gastracker.io/tx/[[txHash]]',
@@ -7213,123 +7173,9 @@ arguments[4][3][0].apply(exports,arguments)
 },{"dup":3}],65:[function(require,module,exports){
 module.exports=[
   {
-    "address":"0xAf30D2a7E90d7DC361c8C4585e9BB7D2F6f15bc7",
-    "symbol":"1ST",
+    "address":"0x237f687b1634d50b367e09b8462c47fd95682f5d",
+    "symbol":"XNC",
     "decimal":18,
-    "type":"default"
-  },
-  {
-    "address":"0xAc709FcB44a43c35F0DA4e3163b117A17F3770f5",
-    "symbol":"ARC",
-    "decimal":18,
-    "type":"default"
-  },
-  {
-    "address":"0x74c1e4b8cae59269ec1d85d3d4f324396048f4ac",
-    "symbol":"BeerCoin 🍺 ",
-    "decimal":0,
-    "type":"default"
-  },
-  {
-    "address":"0x1e797Ce986C3CFF4472F7D38d5C4aba55DfEFE40",
-    "symbol":"BCDN",
-    "decimal":15,
-    "type":"default"
-  },
-  {
-    "address":"0xe4c94d45f7aef7018a5d66f44af780ec6023378e",
-    "symbol":"CryptoCarbon",
-    "decimal":6,
-    "type":"default"
-  },
-  {
-    "address":"0xbb9bc244d798123fde783fcc1c72d3bb8c189413",
-    "symbol":"DAO",
-    "decimal":16,
-    "type":"default"
-  },
-  {
-    "address":"0x5c40eF6f527f4FbA68368774E6130cE6515123f2",
-    "symbol":"DAO_extraBalance",
-    "decimal":0,
-    "type":"default"
-  },
-  {
-    "address":"0xe0b7927c4af23765cb51314a0e0521a9645f0e2a",
-    "symbol":"DGD",
-    "decimal":9,
-    "type":"default"
-  },
-  {
-    "address":"0x55b9a11c2e8351b4ffc7b11561148bfac9977855",
-    "symbol":"DGX 1.0",
-    "decimal":9,
-    "type":"default"
-  },
-  {
-    "address":"0xa74476443119A942dE498590Fe1f2454d7D4aC0d",
-    "symbol":"GNT",
-    "decimal":18,
-    "type":"default"
-  },
-  {
-    "address":"0x14F37B574242D366558dB61f3335289a5035c506",
-    "symbol":"HKG",
-    "decimal":3,
-    "type":"default"
-  },
-  {
-    "address":"0x888666CA69E0f178DED6D75b5726Cee99A87D698",
-    "symbol":"ICN",
-    "decimal":18,
-    "type":"default"
-  },
-  {
-    "address":"0xc66ea802717bfb9833400264dd12c2bceaa34a6d",
-    "symbol":"MKR",
-    "decimal":18,
-    "type":"default"
-  },
-  {
-    "address":"0x45e42D659D9f9466cD5DF622506033145a9b89Bc",
-    "symbol":"Nexium",
-    "decimal":3,
-    "type":"default"
-  },
-  {
-    "address":"0xD8912C10681D8B21Fd3742244f44658dBA12264E",
-    "symbol":"PLU",
-    "decimal":18,
-    "type":"default"
-  },
-  {
-    "address":"0x48c80F1f4D53D5951e5D5438B54Cba84f29F32a5",
-    "symbol":"REP",
-    "decimal":18,
-    "type":"default"
-  },
-  {
-    "address":"0xaec2e87e0a235266d9c5adc9deb4b2e29b54d009",
-    "symbol":"SNGLS",
-    "decimal":0,
-    "type":"default"
-  },
-  {
-    "address":"0x89205A3A3b2A69De6Dbf7f01ED13B2108B2c43e7",
-    "symbol":"Unicorn 🦄 ",
-    "decimal":0,
-    "type":"default"
-  },
-  {
-    "address":"0x5c543e7AE0A1104f78406C340E9C64FD9fCE5170",
-    "symbol":"VSL",
-    "decimal":18,
-    "type":"default"
-  },
-  {
-    "address":"0x4DF812F6064def1e5e029f1ca858777CC98D2D81",
-    "symbol":"XAUR",
-    "decimal":8,
     "type":"default"
   }
 ]

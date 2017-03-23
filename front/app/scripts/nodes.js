@@ -1,5 +1,5 @@
 'use strict';
-var nodes = function() {}
+var nodes = function () {}
 nodes.customNode = require('./nodeHelpers/customNode');
 nodes.nodeTypes = {
     ETH: "ETH",
@@ -31,7 +31,7 @@ nodes.nodeList = {
         'tokenList': require('./tokens/ethTokens.json'),
         'abiList': require('./abiDefinitions/ethAbi.json'),
         'estimateGas': true,
-        'service': 'MyEtherWallet',
+        'service': 'Mainnet',
         'lib': new nodes.customNode('https://api.myetherapi.com/eth', '')
     },
     'eth2_mew': {
@@ -44,7 +44,7 @@ nodes.nodeList = {
         'tokenList': require('./tokens/ethTokens.json'),
         'abiList': require('./abiDefinitions/ethAbi.json'),
         'estimateGas': true,
-        'service': 'MyEtherWallet',
+        'service': 'Mainnet',
         'lib': require('./nodeHelpers/mewEth')
     },
     'eth_ethscan': {
@@ -70,9 +70,11 @@ nodes.nodeList = {
         'tokenList': require('./tokens/ropstenTokens.json'),
         'abiList': require('./abiDefinitions/ropstenAbi.json'),
         'estimateGas': true,
-        'service': 'MyEtherWallet',
+        'service': 'Mainnet',
         'lib': new nodes.customNode('https://api.myetherapi.com/rop', '')
-    },
+    }
+}
+const testnodes = {
     'etc_epool': {
         'name': 'ETC',
         'blockExplorerTX': 'https://gastracker.io/tx/[[txHash]]',
