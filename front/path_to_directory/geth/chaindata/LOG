@@ -1,0 +1,19 @@
+=============== Feb 8, 2017 (JST) ===============
+11:35:46.205159 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+11:35:46.205971 db@open opening
+11:35:46.212418 version@stat F·[] S·0B[] Sc·[]
+11:35:46.216815 db@janitor F·2 G·0
+11:35:46.216900 db@open done T·10.885765ms
+11:35:46.220819 db@close closing
+11:35:46.220912 db@close done T·91.42µs
+=============== Feb 8, 2017 (JST) ===============
+11:35:46.224361 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+11:35:46.224618 version@stat F·[] S·0B[] Sc·[]
+11:35:46.224642 db@open opening
+11:35:46.224720 journal@recovery F·1
+11:35:46.226308 journal@recovery recovering @1
+11:35:46.253836 version@stat F·[] S·0B[] Sc·[]
+11:35:46.254881 db@janitor F·2 G·0
+11:35:46.254907 db@open done T·30.252208ms
+11:35:50.531746 db@close closing
+11:35:50.536548 db@close done T·4.794633ms

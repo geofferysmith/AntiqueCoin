@@ -1,0 +1,8 @@
+=============== Feb 8, 2017 (JST) ===============
+11:35:48.741034 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+11:35:48.741710 db@open opening
+11:35:48.742167 version@stat F·[] S·0B[] Sc·[]
+11:35:48.743885 db@janitor F·2 G·0
+11:35:48.743930 db@open done T·2.203213ms
+11:35:50.538749 db@close closing
+11:35:50.539005 db@close done T·249.628µs
