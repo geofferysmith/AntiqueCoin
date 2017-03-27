@@ -10,7 +10,7 @@ module.exports=[
 },{}],2:[function(require,module,exports){
 module.exports=[{
     "name": "XNC",
-    "address": "0x237f687b1634d50b367e09b8462c47fd95682f5d",
+    "address": "0xcd86b9b59c2a4522ecebc168dbb302a9866f897f",
     "abi": '[{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"founder","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_fileHash","type":"bytes32"}],"name":"registerAntique","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"balance","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_newFounder","type":"address"}],"name":"changeFounder","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"bytes32"}],"name":"antiques","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_fileHash","type":"bytes32"}],"name":"transferAntique","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"},{"name":"_spender","type":"address"}],"name":"allowance","outputs":[{"name":"remaining","type":"uint256"}],"payable":false,"type":"function"},{"inputs":[{"name":"_founder","type":"address"},{"name":"_totalSupply","type":"uint256"}],"payable":false,"type":"constructor"},{"payable":false,"type":"fallback"},{"anonymous":false,"inputs":[{"indexed":false,"name":"hash","type":"bytes32"}],"name":"RegistrationAntique","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"filehash","type":"bytes32"},{"indexed":false,"name":"from","type":"address"},{"indexed":false,"name":"to","type":"address"}],"name":"TransferAntique","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_from","type":"address"},{"indexed":true,"name":"_to","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_owner","type":"address"},{"indexed":true,"name":"_spender","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Approval","type":"event"}]'
 }]
 },{}],3:[function(require,module,exports){
@@ -7173,7 +7173,7 @@ arguments[4][3][0].apply(exports,arguments)
 },{"dup":3}],65:[function(require,module,exports){
 module.exports=[
   {
-    "address":"0x237f687b1634d50b367e09b8462c47fd95682f5d",
+    "address":"0xcd86b9b59c2a4522ecebc168dbb302a9866f897f",
     "symbol":"XNC",
     "decimal":18,
     "type":"default"
@@ -7205,8 +7205,8 @@ en.data = {
   NAV_AddWallet: 'Add Wallet',
   NAV_GenerateWallet: 'Generate Wallet',
   NAV_BulkGenerate: 'Bulk Generate',
-  NAV_SendEther: 'Send Ether & Tokens',
-  NAV_SendTokens: 'Send Tokens',
+  NAV_SendEther: 'Send Ether & XNC Tokens',
+  NAV_SendTokens: 'Send XNC Tokens',
   NAV_Offline: 'Send Offline',
   NAV_DeployContract: 'Deploy Contract',
   NAV_InteractContract: 'Interact with Contract',
@@ -7762,8 +7762,8 @@ ja.data = {
   NAV_AddWallet: 'ウォレット追加',
   NAV_GenerateWallet: 'ウォレット作成',
   NAV_BulkGenerate: 'バルク作成',
-  NAV_SendEther: 'Ether送出 トークン送出',
-  NAV_SendTokens: 'トークン送出',
+  NAV_SendEther: 'Ether送出 XNC送出',
+  NAV_SendTokens: 'XNC送出',
   NAV_Offline: 'オフライン送出',
   NAV_DeployContract: 'コントラクトをデプロイ',
   NAV_InteractContract: 'Interact with Contract',

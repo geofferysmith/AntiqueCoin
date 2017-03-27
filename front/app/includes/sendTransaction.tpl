@@ -120,7 +120,8 @@
         <div class="form-group" ng-bind-html="sendTxStatus"></div>
 
         <div class="alert alert-info" ng-show="tx.sendMode=='token'">
-          <p>If you are getting an insufficient balance for gas ... error, you must have a small amount of ETH in your account in order to cover the cost of gas. Add 0.01 ETH to this account and try again.</p>
+          <p>If you are getting an insufficient balance for gas ... error, you must have a small amount of ETH in your account in order to cover the cost of gas. Add 0.01 ETH to this account and try again.
+          もしアカウントに最低0.01ETHがない場合、ガス切れにより送信できません。ガスの消費を賄うだけの最小限のETHをアカウントに入れて再度送信してください。</p>
         </div>
 
 

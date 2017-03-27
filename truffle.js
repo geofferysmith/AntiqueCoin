@@ -14,23 +14,28 @@ module.exports = {
     port: 8545
   },
   networks: {
-    "parity": {
-      network_id: 1, // Ethereum public network
+    "dev": {
+      network_id: 910, // Ethereum public network
       host: "localhost", // Random IP for example purposes (do not use)
-      port: 8545,
-      gas: 3712388
-        // optional config values
-        // host - defaults to "localhost"
-        // port - defaults to 8545
-        // gas
-        // gasPrice
-        // from - default address to use for any transaction Truffle makes during migrations
+      port: 8557,
+      gas: 912388,
+      gasPrice: 20000000000
+       
     },
-    "geth": {
+    "testrpc": {
       network_id: 1, // Official Ethereum test network
       host: "localhost",
       port: 8545,
-      gas: 3712388
+      gas: 912388,
+      gasPrice: 20000000000
+
+    },
+    "production": {
+      network_id: 1, // Official Ethereum  network
+      host: "54.186.163.182",
+      port: 8545,
+      gas: 917238,
+      gasPrice: 20000000000
     },
     "staging": {
       network_id: 1337 // custom private network
