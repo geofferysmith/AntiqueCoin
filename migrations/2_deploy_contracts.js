@@ -1,7 +1,10 @@
 var Antique = artifacts.require("./AntiqueCoin.sol");
 
-module.exports = function (deployer) {
+const owner = web3.eth.accounts[0]
+
+module.exports = function (deployer, network, accounts) {
   // deployer.deploy(ConvertLib);
   //deployer.link(ConvertLib, MetaCoin);
-  deployer.deploy(Antique, 0x675cfbde546e7ef7a2a4c7470010ee5166622af2, 100000 * 10^18);
+  deployer.deploy(Antique, owner, web3.toWei(100000000, 'ether'));
+
 };

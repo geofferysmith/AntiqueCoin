@@ -10,7 +10,7 @@ module.exports = {
        
     },
     "testrpc": {
-      network_id: 1, // Official Ethereum test network
+      network_id: 12, // Official Ethereum test network
       host: "localhost",
       port: 8545,
       gas: 912388,

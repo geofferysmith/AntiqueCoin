@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/AntiqueCoin/AntiqueCoin/issues"
   },
-  "homepage": "https://github.com/AntiqueCoin/AntiqueCoin#readme"
+  "homepage": "https://github.com/AntiqueCoin/AntiqueCoin#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "json2csv": "^3.7.3",
+    "keythereum": "^0.5.2",
+    "numeral": "^2.0.6"
+  }
 }
