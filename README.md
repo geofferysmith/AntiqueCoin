@@ -8,5 +8,7 @@ getting started
 $ npm install
 ```
 ```
-$ npm truffle migrate --network testrpc
+$ truffle migrate --network testrpc
 ```
+
+
