@@ -1,21 +1,8 @@
 module.exports = {
-  build: {
-    "index.html": "index.html",
-    "app.js": [
-      "javascripts/app.js"
-    ],
-    "app.css": [
-      "stylesheets/app.css"
-    ],
-    "images/": "images/"
-  },
-  rpc: {
-    host: "localhost",
-    port: 8545
-  },
+
   networks: {
     "dev": {
-      network_id: 910, // Ethereum public network
+      network_id: 11, // Ethereum public network
       host: "localhost", // Random IP for example purposes (do not use)
       port: 8557,
       gas: 912388,
@@ -23,7 +10,7 @@ module.exports = {
        
     },
     "testrpc": {
-      network_id: 1, // Official Ethereum test network
+      network_id: 12, // Official Ethereum test network
       host: "localhost",
       port: 8545,
       gas: 912388,

@@ -1,7 +1,7 @@
 {
-  "name": "x-coin",
+  "name": "bas",
   "version": "1.0.0",
-  "description": "",
+  "description": "Release ver 2.0",
   "main": "truffle.js",
   "directories": {
     "test": "test"
@@ -11,12 +11,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AntiqueCoin/AntiqueCoin.git"
+    "url": "git+https://geofferysmith@github.com/AntiqueCoin/AntiqueCoin.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/AntiqueCoin/AntiqueCoin/issues"
   },
-  "homepage": "https://github.com/syrAntiqueCoinohei/AntiqueCoin#readme"
+  "homepage": "https://github.com/AntiqueCoin/AntiqueCoin#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "json2csv": "^3.7.3",
+    "keythereum": "^0.5.2",
+    "numeral": "^2.0.6"
+  }
 }
