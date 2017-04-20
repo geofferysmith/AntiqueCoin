@@ -2,17 +2,7 @@ var AntiqueCoin = artifacts.require("./AntiqueCoin.sol");
 
 let meta;
 
-const Converter = require("csvtojson").Converter;
-const converter = new Converter({});
 
-const read = (filename) => {
-  return new Promise((resolve, reject) => {
-    converter.fromFile(filename, function (err, resource) {
-      if (err) return reject(err)
-      resolve(resource)
-    })
-  })
-}
 
 contract('AntiqueCoin', function (accounts) {
   const owner = accounts[0]
@@ -38,10 +28,31 @@ contract('AntiqueCoin', function (accounts) {
     }).then(done).catch(done)
   })
   it("should migrate token allocations for all token holders", function (done) {
-    read('../test/data.csv').then((data) => {
-      console.log(data)
-      done()
+    const data = require('../data.json')
+    var numeral = require('numeral');
+    data.forEach((customer, i) => {
+      data[i].token_value = numeral(customer.total_alocate_amount).value() / Number(customer.rate)
+      data[i].token_value = data[i].token_value.toFixed()
     })
-   
+
+    const lists = []
+    data.forEach((customer) => {
+      const stack = customer
+      const index = lists.map((s) => s.customer_id).indexOf(customer.customer_id)
+
+      stack.total_deposit = numeral(customer.total_alocate_amount).value()
+      stack.total_alocation = numeral(customer.token_value).value()
+
+      if (index > -1) {
+        lists[index].total_deposit += numeral(customer.total_alocate_amount).value()
+        lists[index].total_alocation += numeral(customer.token_value).value()
+      } else {
+        lists.push(stack)
+      }
+      console.log(stack.cutomer_name, stack.total_alocate_amount, stack.rate, stack.token_value)
+    })
+    lists.forEach((list) => {
+      console.log(list.cutomer_name, list.allocations, list.total_alocate_amount, list.plus, list.rate)
+    })
   })
 })
