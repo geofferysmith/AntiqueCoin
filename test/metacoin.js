@@ -1,5 +1,3 @@
-var AntiqueCoin = artifacts.require("./AntiqueCoin.sol")
-
 var MetaCoin = artifacts.require("./MetaCoin.sol");
 
 contract('MetaCoin', function(accounts) {
@@ -24,14 +22,13 @@ contract('MetaCoin', function(accounts) {
     }).then(function(outCoinBalanceEth) {
       metaCoinEthBalance = outCoinBalanceEth.toNumber();
     }).then(function() {
-      assert.equal(metaCoinEthBalance, 2 * metaCoinBalance, "Library function returned unexpeced function, linkage may be broken");
+      assert.equal(metaCoinEthBalance, 2 * metaCoinBalance, "Library function returned unexpected function, linkage may be broken");
     });
   });
-
   it("should send coin correctly", function() {
     var meta;
 
-    //    Get initial balances of first and second account.
+    // Get initial balances of first and second account.
     var account_one = accounts[0];
     var account_two = accounts[1];
 
@@ -64,32 +61,3 @@ contract('MetaCoin', function(accounts) {
     });
   });
 });
-
-/*
-
-var data = {
-  contract: undefined
-}
-
-contract('AntiqueCoin', function (accounts) {
-  const owner = accounts[1]
-  it('should not changes token params that depends owner = accounts[0]', (done) => {
-    AntiqueCoin.new("0xf8752a97918bafc48e7f4725aa7a8b2ac73a0b47", 1000000).then((_meta) => {
-      data.contract = _meta
-      // console.log(data.contract);
-      return data.contract.founder.call({
-        from: owner
-      })
-    }).then((token_address) => {
-      console.log(token_address);
-      assert.strictEqual(token_address, "0xf8752a97918bafc48e7f4725aa7a8b2ac73a0b47");
-    }).then(() => data.contract.totalSupply.call({
-      from: owner
-    })).then((totalSupply) => {
-      assert.strictEqual(totalSupply.toNumber(), 1000000)
-    }).then(done).catch(done)
-  })
-
- 
-
-})
