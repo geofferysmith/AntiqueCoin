@@ -7,11 +7,11 @@ contract('AntiqueCoin', function (accounts) {
   const owner = accounts[0]
 
   it("should put  10000000000*10^18 AntiqueCoin in the first account", function (done) {
-    AntiqueCoin.new(owner, 10000000000 * 10 ^ 18).then((_meta) => {
+    AntiqueCoin.new(owner, web3.toWei(10000000000, 'ether')).then((_meta) => {
       meta = _meta;
       return meta.balanceOf.call(owner);
     }).then(function (balance) {
-      assert.equal(balance.valueOf(), 10000000000 * 10 ^ 18, "10000 wasn't in the first account");
+      assert.equal(balance.toNumber(), web3.toWei(10000000000, 'ether'), "10000 wasn't in the first account");
       done()
     });
   });
@@ -21,10 +21,8 @@ contract('AntiqueCoin', function (accounts) {
     }).then((token_address) => {
       console.log(token_address);
       assert.strictEqual(token_address, owner);
-    }).then(() => meta.totalSupply.call({
-      from: owner
-    })).then((totalSupply) => {
-      assert.strictEqual(totalSupply.toNumber(), 10000000000 * 10 ^ 18)
+    }).then(() => meta.totalSupply.call()).then((totalSupply) => {
+      assert.equal(totalSupply.toNumber(), web3.toWei(10000000000, 'ether'))
     }).then(done).catch(done)
   })
   it("should migrate token allocations for all token holders", function (done) {
@@ -60,7 +58,8 @@ contract('AntiqueCoin', function (accounts) {
   })
   it("should deploy allocations for all token holders", function (done) {
     const data = []
-    const balance_start = web3.eth.getBalance(owner)
+    const b = web3.eth.getBalance(owner)
+    const balance_start = b.toNumber()
     allocations.forEach((customer, i) => {
       var params = {
         keyBytes: 32,
@@ -81,14 +80,25 @@ contract('AntiqueCoin', function (accounts) {
     })
     console.log(JSON.stringify(data, null, '\t'))
     data.forEach((cutomer) => {
-      meta.transfer(cutomer.address, cutomer.allocate * 10 ^ 18, {
+      const value = web3.toWei(cutomer.allocate, 'ether');
+      meta.transfer(cutomer.address, value, {
         from: owner,
-        gas: 122388,
+        gas: 72388,
         gasPrice: 20000000000
       })
-
     })
-    const balance = web3.eth.getBalance(owner)
-    console.log(bbalance_start.toNumber(), alance.toNumber())
+    setTimeout(() => {
+      const balance = web3.eth.getBalance(owner).toNumber()
+      console.log(balance_start, balance, balance_start - balance)
+
+      data.forEach((customer) => {
+        meta.balanceOf.call(customer.address).then((result) => {
+          console.log(result.toNumber())
+        })
+      })
+      done()
+    }, 12000)
+
+
   })
 })
