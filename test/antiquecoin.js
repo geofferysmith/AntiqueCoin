@@ -117,7 +117,5 @@ contract('AntiqueCoin', function (accounts) {
       })
       done()
     }, 12000)
-
-
   })
 })

@@ -13,16 +13,14 @@ module.exports = {
       network_id: 12, // Official Ethereum test network
       host: "localhost",
       port: 8545,
-      gas: 912388,
-      gasPrice: 20000000000
+      gas: 2400000
 
     },
     "production": {
       network_id: 1, // Official Ethereum  network
-      host: "54.186.163.182",
+      host: "54.190.29.244",
       port: 8545,
-      gas: 917238,
-      gasPrice: 20000000000
+      gas: 2400000
     },
     "staging": {
       network_id: 1337 // custom private network
