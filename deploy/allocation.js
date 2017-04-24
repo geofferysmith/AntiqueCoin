@@ -6,7 +6,9 @@ const json2csv = require('../node_modules/json2csv');
 const owner = web3.eth.accounts[0]
 const data = require('../data.json')
 let meta;
+let istxend = false;
 let allocations;
+const stack = []
 
 module.exports = function () {
 
@@ -41,6 +43,7 @@ module.exports = function () {
         allocations = lists
 
         const base = []
+        const ss = []
         const b = web3.eth.getBalance(owner)
         const balance_start = b.toNumber()
         allocations.forEach((customer, i) => {
@@ -60,16 +63,18 @@ module.exports = function () {
                 allocate: customer.total_alocation
             }
             base.push(meta)
+            ss.push(meta)
+            stack.push(meta)
         })
         console.log(JSON.stringify(data, null, '\t'))
-        base.forEach((cutomer) => {
-            const value = web3.toWei(cutomer.allocate, 'ether');
-            meta.transfer(cutomer.address, value, {
-                from: owner,
-                gas: 51388,
-                gasPrice: 20000000000
-            })
-        })
+        setInterval(() => {
+            alo(ss)
+        }, 22000)
+        setInterval(() => {
+            alo()
+
+        }, 2000)
+
         var fields = ['name', 'deposit_jpy', 'address', 'privkey', 'allocate'];
 
         try {
@@ -87,15 +92,38 @@ module.exports = function () {
             console.error(err);
         }
 
-        setTimeout(() => {
-            const balance = web3.eth.getBalance(owner).toNumber()
-            console.log(balance_start, balance, balance_start - balance)
 
-            base.forEach((customer) => {
-                meta.balanceOf.call(customer.address).then((result) => {
-                    console.log(result.toNumber())
-                })
-            })
-        }, 12000)
     })
+}
+
+function alo() {
+    if (stack.length == 0) {
+        istxend = true
+        return 0
+    }
+    const a = stack.pop()
+    const value = web3.toWei(a.allocate, 'ether');
+    meta.transfer(a.address, value, {
+        from: owner
+    })
+    const wei = web3.toWei(0.013, 'ether');
+    web3.eth.sendTransaction({
+        to: a.address,
+        value: wei,
+        from: owner
+    })
+    console.log(a.name, a.address, value, wei, owner)
+}
+
+function alos(base) {
+    if (!istxend) return 0
+    if (base.length == 0) return 0
+
+    const a = base.pop()
+    meta.balanceOf.call(a.address).then((result) => {
+        console.log(result.toNumber())
+    })
+    setTimeout(() => {
+        alos(base)
+    }, 200)
 }

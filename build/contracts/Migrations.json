@@ -70,8 +70,8 @@
     "12": {
       "links": {},
       "events": {},
-      "updated_at": 1493007597227,
-      "address": "0xe1486cdff94633ce6c32c22a62e08fad8e11a3d0"
+      "updated_at": 1493012943696,
+      "address": "0xadebcbe6f17ea762a168fe07bcb11d485034d27e"
     },
     "1493006310360": {
       "events": {},
@@ -81,5 +81,5 @@
     }
   },
   "schema_version": "0.0.5",
-  "updated_at": 1493007857585
+  "updated_at": 1493012943696
 }
